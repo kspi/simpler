@@ -21,7 +21,6 @@ link_libraries(
 include(UseSWIG)
 swig_add_module(simpler guile
   simpler.i
-  simpler.c
   drawing.c
   drawing.h
   )
