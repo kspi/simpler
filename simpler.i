@@ -1,10 +1,6 @@
-%module vs
+%module simpler
 %{
 #include "drawing.h"
-void init();
-void end();
 %}
 
 %include drawing.h
-void init();
-void end();
