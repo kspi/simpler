@@ -1,6 +1,6 @@
 
 ;; initialize drawing extension
-(load-extension "./libvs.so" "SWIG_init")
+(load-extension "./libsimpler.so" "SWIG_init")
 
 
 ;; functions

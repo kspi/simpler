@@ -1,2 +1,2 @@
 #!/bin/sh
-exec guile vs.ss
+exec guile simpler.ss

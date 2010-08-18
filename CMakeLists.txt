@@ -19,9 +19,9 @@ link_libraries(
   )
 
 include(UseSWIG)
-swig_add_module(vs guile vs.i vs.c drawing.c drawing.h)
-
-# Workaround UseSWIG supporting only C
-set(CMAKE_SWIG_FLAGS -c++)
-set_source_files_properties(${swig_generated_file_fullname}
-  LANGUAGE CXX)
+swig_add_module(simpler guile
+  simpler.i
+  simpler.c
+  drawing.c
+  drawing.h
+  )
