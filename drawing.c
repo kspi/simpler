@@ -19,8 +19,22 @@ void box(int c, int x, int y, int w, int h) {
       point(c, i, j);
 }
 
-void wait(int t) {
+void nap(int t) {
   SDL_Delay(t);
+
+  SDL_Event event;
+  while(SDL_PollEvent(&event)) {
+    switch(event.type){
+    case SDL_KEYUP:
+      if (event.key.keysym.sym == SDLK_ESCAPE) {
+        exit(0);
+      }
+      break;
+    case SDL_QUIT:
+      exit(0);
+      break;
+    }
+  }
 }
 
 void render() {

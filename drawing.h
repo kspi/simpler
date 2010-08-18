@@ -14,7 +14,7 @@ extern SDL_Surface *screen;
 
 void point(int, int, int);
 void box(int, int, int, int, int);
-void wait(int);
+void nap(int);
 
 void render();
 void init();

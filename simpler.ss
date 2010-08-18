@@ -15,7 +15,7 @@
       (begin        
         (vlt fc 10)
         (render)
-        (wait 40)
+        (nap 40)
         (yay (- fc 1)))))
 
 
