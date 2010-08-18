@@ -34,7 +34,5 @@ void init() {
     FAIL("Cant get screen: ", SDL_GetError());
   }
 
-  int gridbytes = gridsize*gridsize*sizeof(Uint32);
-  grid = (Uint32*)malloc(gridbytes);
-  memset((void*)grid, 0x00, gridbytes);
+  grid = calloc(gridsize * gridsize, sizeof *grid);
 }
