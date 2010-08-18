@@ -18,7 +18,6 @@ void nap(int);
 
 void render();
 void init();
-void end();
 
 #endif
 

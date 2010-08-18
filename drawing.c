@@ -56,22 +56,10 @@ void render() {
   SDL_UpdateRect(screen, 0, 0, screen->w, screen->h);
 }
 
-void end() {
-  SDL_Quit();
-
-  if (grid != NULL) {
-    free(grid);
-    grid = NULL;
-  }
-}
-
-
 void init() {
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     FAIL("Unable to init sdl: %s\n", SDL_GetError());
   }
-
-  atexit(end);
 
   screen = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32, SDL_SWSURFACE);
   if (screen == NULL) {
